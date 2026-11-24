@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Сдать лабораторную работу № 7",
+    "deadline": "2026-11-26",
+    "category": "study",
+    "categoryLabel": "Учёба",
+    "priority": 3,
+    "priorityLabel": "Критический",
+    "reminder": "Каждые 4 часа"
+  },
+  {
+    "id": 2,
+    "title": "Подготовить отчёт по проекту",
+    "deadline": "2026-11-27",
+    "category": "work",
+    "categoryLabel": "Работа",
+    "priority": 2,
+    "priorityLabel": "Высокий",
+    "reminder": "Раз в день в 10:00"
+  },
+  {
+    "id": 3,
+    "title": "Оплатить интернет и коммунальные услуги",
+    "deadline": "2026-11-28",
+    "category": "home",
+    "categoryLabel": "Быт",
+    "priority": 2,
+    "priorityLabel": "Высокий",
+    "reminder": "За 2 дня до срока"
+  },
+  {
+    "id": 4,
+    "title": "Спроектировать базу данных для курсача",
+    "deadline": "2026-11-30",
+    "category": "study",
+    "categoryLabel": "Учёба",
+    "priority": 3,
+    "priorityLabel": "Критический",
+    "reminder": "Ежедневно в 18:00"
+  },
+  {
+    "id": 5,
+    "title": "Созвон с командой по распределению ролей",
+    "deadline": "2026-11-25",
+    "category": "work",
+    "categoryLabel": "Работа",
+    "priority": 2,
+    "priorityLabel": "Высокий",
+    "reminder": "За 30 минут до начала"
+  },
+  {
+    "id": 6,
+    "title": "Купить продукты на неделю",
+    "deadline": "2026-11-25",
+    "category": "home",
+    "categoryLabel": "Быт",
+    "priority": 1,
+    "priorityLabel": "Обычный",
+    "reminder": "Сегодня в 19:00"
+  },
+  {
+    "id": 7,
+    "title": "Повторить билеты по электротехнике",
+    "deadline": "2026-12-02",
+    "category": "study",
+    "categoryLabel": "Учёба",
+    "priority": 1,
+    "priorityLabel": "Обычный",
+    "reminder": "Через день"
+  },
+  {
+    "id": 8,
+    "title": "Обновить документацию API",
+    "deadline": "2026-12-04",
+    "category": "work",
+    "categoryLabel": "Работа",
+    "priority": 1,
+    "priorityLabel": "Обычный",
+    "reminder": "За 3 дня до дедлайна"
+  }
+]

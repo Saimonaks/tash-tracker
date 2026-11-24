@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профиль — Трекинг целей и задач с напоминанием</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Трекинг целей и задач</a>
+    <nav aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="goals.html">Цели</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="profile.html" aria-current="page">Профиль</a></li>
+        <li><a class="nav-link" href="auth.html#login">Вход</a></li>
+        <li><a class="nav-link" href="auth.html#register">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Профиль</h1>
+
+    <div class="workspace-grid">
+      <aside class="card">
+        <h2>Данные пользователя</h2>
+
+        <figure class="placeholder-box">
+          <img src="demo1.png" alt="Заглушка аватара пользователя">
+        </figure>
+
+        <p>Имя: <span></span></p>
+        <p>Последний онлайн: <time></time></p>
+
+        <form action="#" method="post">
+          <h3>Информация о себе</h3>
+
+          <div class="form-group">
+            <label for="profile-username">Имя пользователя:</label>
+            <input class="form-control" type="text" id="profile-username" name="username">
+          </div>
+
+          <div class="form-group">
+            <label for="profile-contacts">Контакты:</label>
+            <input class="form-control" type="text" id="profile-contacts" name="contacts">
+          </div>
+
+          <div class="form-group">
+            <label for="profile-bio">О себе:</label>
+            <textarea class="form-control" id="profile-bio" name="bio" rows="4"></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Сохранить</button>
+        </form>
+      </aside>
+
+      <div class="content-column">
+        <section class="card">
+          <h2>Дедлайны и важные задачи</h2>
+          <ul class="empty-list"></ul>
+        </section>
+
+        <section class="card">
+          <h2>Календарь</h2>
+          <figure class="placeholder-box">
+            <img src="demo1.png" alt="Заглушка календаря">
+          </figure>
+        </section>
+
+        <section class="card">
+          <h2>Недавние достижения</h2>
+          <ul class="empty-list"></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Служебная навигация">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="error.html">Справка и диагностика ошибок</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задачи — Трекинг целей и задач с напоминанием</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a class="logo" href="index.html">Трекинг целей и задач</a>
+      <button class="btn burger-btn" id="burger-btn" type="button" aria-label="Открыть меню">☰ Меню</button>
+    </div>
+
+    <nav aria-label="Основная навигация">
+      <ul class="nav-list" id="nav-list">
+        <li><a class="nav-link" href="tasks.html" aria-current="page">Задачи</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="profile.html">Профиль</a></li>
+        <li><a class="nav-link" href="auth.html#login">Вход</a></li>
+        <li><a class="nav-link" href="auth.html#register">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Задачи</h1>
+
+    <div class="workspace-grid">
+      <div class="content-column">
+        <section class="card">
+          <h2>Список вкладок и задач</h2>
+
+          <form id="create-task-form" novalidate>
+            <div class="form-group">
+              <label for="new-task-title">Новое задание:</label>
+              <input class="form-control" type="text" id="new-task-title" name="title" required>
+            </div>
+
+            <div class="form-group">
+              <label for="new-task-deadline">Дедлайн:</label>
+              <input class="form-control" type="date" id="new-task-deadline" name="deadline" required>
+            </div>
+
+            <div class="form-group">
+              <label for="new-task-category">Категория:</label>
+              <select class="form-control" id="new-task-category" name="category">
+                <option value="work">Работа</option>
+                <option value="study">Учёба</option>
+                <option value="home">Быт</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="new-task-priority">Приоритет:</label>
+              <select class="form-control" id="new-task-priority" name="priority">
+                <option value="1">Обычный</option>
+                <option value="2">Высокий</option>
+                <option value="3">Критический</option>
+              </select>
+            </div>
+
+            <p class="field__error" id="task-form-error"></p>
+            <button class="btn btn-primary" type="submit">Добавить</button>
+          </form>
+
+          <ul class="empty-list" id="tasks-page-list"></ul>
+        </section>
+
+        <section class="card">
+          <h2>Открытая задача</h2>
+
+          <div class="button-row">
+            <button class="btn btn-primary" type="button">Напоминание</button>
+            <button class="btn" type="button">Назад</button>
+          </div>
+
+          <h3>Список подзадач</h3>
+          <ul class="empty-list"></ul>
+        </section>
+      </div>
+
+      <aside class="card">
+        <h2>Информация и описание задачи</h2>
+
+        <div class="button-row">
+          <button class="btn btn-primary" type="button">Редактировать описание</button>
+          <button class="btn" type="button">Закрыть</button>
+        </div>
+
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="task-description">Описание выбранной задачи:</label>
+            <textarea class="form-control" id="task-description" name="description" rows="6" readonly></textarea>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Служебная навигация">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="auth.html#login">Вход</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

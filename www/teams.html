@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Команды — Трекинг целей и задач с напоминанием</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Трекинг целей и задач</a>
+    <nav aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="goals.html">Цели</a></li>
+        <li><a class="nav-link" href="teams.html" aria-current="page">Команды</a></li>
+        <li><a class="nav-link" href="profile.html">Профиль</a></li>
+        <li><a class="nav-link" href="auth.html#login">Вход</a></li>
+        <li><a class="nav-link" href="auth.html#register">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Команды</h1>
+
+    <section class="section-block card">
+      <h2>Информация о команде</h2>
+      <p>Название команды: <span></span></p>
+      <p>Описание команды: <span></span></p>
+
+      <div class="button-row">
+        <button class="btn btn-primary" type="button">Вступить</button>
+        <button class="btn" type="button">Выйти</button>
+      </div>
+    </section>
+
+    <div class="workspace-grid">
+      <div class="content-column">
+        <section class="card">
+          <h2>Список вкладок и задач команды</h2>
+
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="new-team-task">Новое задание:</label>
+              <input class="form-control" type="text" id="new-team-task" name="team_task_title">
+            </div>
+            <button class="btn btn-primary" type="submit">Добавить</button>
+          </form>
+
+          <ul class="empty-list"></ul>
+        </section>
+
+        <section class="card">
+          <h2>Открытая задача</h2>
+
+          <div class="button-row">
+            <button class="btn btn-primary" type="button">Напоминание</button>
+            <button class="btn" type="button">Назад</button>
+          </div>
+
+          <h3>Список подзадач</h3>
+          <ul class="empty-list"></ul>
+        </section>
+      </div>
+
+      <aside class="card">
+        <h2>Информация и описание задачи</h2>
+
+        <div class="button-row">
+          <button class="btn btn-primary" type="button">Редактировать описание</button>
+          <button class="btn" type="button">Закрыть</button>
+        </div>
+
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="team-task-description">Описание выбранной задачи:</label>
+            <textarea class="form-control" id="team-task-description" name="description" rows="6" readonly></textarea>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Служебная навигация">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="error.html">Справка и диагностика ошибок</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

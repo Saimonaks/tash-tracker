@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Трекинг целей и задач с напоминанием</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a class="logo" href="index.html">Трекинг целей и задач</a>
+      <button class="btn burger-btn" id="burger-btn" type="button" aria-label="Открыть меню">☰ Меню</button>
+    </div>
+
+    <nav aria-label="Основная навигация">
+      <ul class="nav-list" id="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="profile.html">Профиль</a></li>
+        <li><a class="nav-link" href="auth.html#login">Вход</a></li>
+        <li><a class="nav-link" href="auth.html#register">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Трекинг целей и задач с напоминанием</h1>
+
+    <section class="section-block card">
+      <h2>О сервисе и интерактивный счётчик</h2>
+      <p>
+        Веб-сервис для планирования рабочих, учебных и бытовых дел с гибкой настройкой
+        частоты напоминаний и приоритетов. Помогает контролировать нагрузку и выполнять задачи
+        вовремя, не вспоминая о них в последний день.
+      </p>
+
+      <div class="button-row">
+        <p class="status-indicator">
+          Выполнено задач в демо-списке: <strong id="tasks-counter">0</strong>
+        </p>
+        <button class="btn btn-primary" id="complete-task-btn" type="button">+ Выполнить задачу</button>
+        <button class="btn" id="open-modal" type="button">Как работают напоминания?</button>
+      </div>
+
+      <figure class="placeholder-box">
+        <img src="img/demo1.png" alt="Демонстрация готового списка задач с приоритетами и дедлайнами">
+        <figcaption>Пример готового списка задач с приоритетами и сроками выполнения</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-block">
+      <h2>Примеры задач и целей из базы данных</h2>
+
+      <div class="filters-bar card">
+        <div class="filter-item">
+          <label for="search">Поиск по названию:</label>
+          <input class="form-control" type="search" id="search" placeholder="Например: отчёт или билеты">
+        </div>
+
+        <div class="filter-item">
+          <label for="category">Категория:</label>
+          <select class="form-control" id="category">
+            <option value="all">Все категории</option>
+            <option value="work">Работа</option>
+            <option value="study">Учёба</option>
+            <option value="home">Быт</option>
+            <option value="archive">Архив</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="sort">Сортировка:</label>
+          <select class="form-control" id="sort">
+            <option value="default">По умолчанию</option>
+            <option value="priority-desc">По приоритету (сначала важные)</option>
+            <option value="deadline-asc">По дедлайну (сначала ближайшие)</option>
+            <option value="title">По названию (А–Я)</option>
+          </select>
+        </div>
+
+        <p class="found-count" id="found">Найдено: 0</p>
+      </div>
+
+      <div class="status" id="status" aria-live="polite"></div>
+
+      <div class="card-list"></div>
+    </section>
+
+    <section class="section-block card">
+      <h2>Подписка на уведомления и быстрый старт</h2>
+      <p>Оставьте контакты, чтобы протестировать отправку напоминаний о дедлайнах.</p>
+
+      <form id="signup" novalidate>
+        <div class="field">
+          <label for="user-name">Имя пользователя:</label>
+          <input class="form-control field__input" type="text" id="user-name" name="name" required>
+          <span class="field__error"></span>
+        </div>
+
+        <div class="field">
+          <label for="user-email">Email для уведомлений:</label>
+          <input class="form-control field__input" type="email" id="user-email" name="email" required>
+          <span class="field__error"></span>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Подключить напоминания</button>
+        <p class="form__success"></p>
+      </form>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal__content card">
+      <div class="modal__header">
+        <h2>Настройка умных напоминаний</h2>
+        <button class="btn modal__close" type="button" aria-label="Закрыть окно">&times;</button>
+      </div>
+      <p>
+        Для каждой задачи можно задать приоритет и частоту повтора уведомлений (раз в день,
+        за 3 дня до дедлайна или каждый час в день сдачи).
+      </p>
+      <p>
+        Это окно закрывается тремя способами: нажатием на крестик «&times;», кликом по тёмному фону
+        вокруг окна или клавишей <strong>Esc</strong>.
+      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Трекинг целей и задач с напоминанием</p>
+    <nav aria-label="Служебная навигация">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="tasks.html">Задачи</a></li>
+        <li><a class="nav-link" href="teams.html">Команды</a></li>
+        <li><a class="nav-link" href="auth.html#login">Вход</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
